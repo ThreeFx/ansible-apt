@@ -3,3 +3,11 @@
   hosts: all
   roles:
     - role: apt
+      apt_additional_repositories: "deb http://deb.debian.org/debian/ testing main"
+      apt_pins:
+        - package: "*"
+          pin: "release a=testing"
+          priority: 10
+        - package: curl
+          pin: "release a=testing"
+          priority: 600

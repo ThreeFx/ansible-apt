@@ -1,3 +1,11 @@
 ---
 apt_install_recommends: "true"
 apt_install_suggests: "false"
+
+apt_additional_repositories: [] # additional repositories, specified as string
+                                # e.g. 'deb http://example.org/debian testing main'
+apt_pins: []                    # customize apt pins, e.g. for installing
+                                # something from backports
+# - package: some-package       # required
+#   pin: a=testing              # required
+#   priority: 600               # required, default: 500, higher is better

@@ -1,40 +1,33 @@
-Role Name
+apt
 =========
 
-A brief description of the role goes here.
+Configures apt.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should
-be mentioned here. For instance, if the role uses the EC2 module, it may be a
-good idea to mention in this section that the boto package is required.
+An apt-based host to configure.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including
-any variables that are in defaults/main.yml, vars/main.yml, and any variables
-that can/should be set via parameters to the role. Any variables that are read
-from other roles and/or the global scope (ie. hostvars, group vars, etc.) should
-be mentioned here as well.
+
+| Variable Name | Default Value | Description |
+--------------- |---------------|--------------
+`apt_install_recommends` | "true" | Whether to install recommended packages. Should be a string variable.
+`apt_install_suggests` | "false" | Whether to install suggested packages. Should be a string variable.
+`apt_additional_repositories` | [] | Additional repositories to configure. [Debian guidelines apply](https://wiki.debian.org/DontBreakDebian)
+`apt_pins` | [] | Package pins to configure, see `defaults/main.yml` for more information
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in
-regards to parameters that may need to be set for other roles, or variables that
-are used from other roles.
+None.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables
-passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: apt, x: 42 }
+See `molecule/default/playbook.yml`.
 
 License
 -------
@@ -44,5 +37,4 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a
-website (HTML is not allowed).
+Find me on [GitHub](https://github.com/ThreeFx).
