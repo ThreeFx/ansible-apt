@@ -7,5 +7,5 @@ apt_additional_repositories: [] # additional repositories, specified as string
 apt_pins: []                    # customize apt pins, e.g. for installing
                                 # something from backports
 # - package: some-package       # required
-#   pin: a=testing              # required
+#   pin: "release a=testing"    # required
 #   priority: 600               # required, default: 500, higher is better
