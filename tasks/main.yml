@@ -1,15 +1,15 @@
 ---
-- name: Install aptitude
-  become: True
-  apt:
-    name:
-      - aptitude
-
 - name: Configure installation of recommended and suggested packages
   become: True
   template:
     src: 90recommended-packages.j2
     dest: /etc/apt/apt.conf.d/90recommended-packages
+
+- name: Install aptitude
+  become: True
+  apt:
+    name:
+      - aptitude
 
 - name: Configure additional repositories
   become: True
