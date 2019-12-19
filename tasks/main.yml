@@ -1,4 +1,10 @@
 ---
+- name: Install aptitude
+  become: True
+  apt:
+    name:
+      - aptitude
+
 - name: Configure installation of recommended and suggested packages
   become: True
   template:
