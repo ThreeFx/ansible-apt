@@ -11,6 +11,13 @@
     name:
       - aptitude
 
+- name: Configure additional keys
+  become: True
+  apt_key:
+    data: "{{ item }}"
+    state: present
+  with_items: "{{ apt_additional_keys }}"
+
 - name: Configure additional repositories
   become: True
   apt_repository:

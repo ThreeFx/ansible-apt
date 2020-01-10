@@ -2,6 +2,7 @@
 apt_install_recommends: "true"
 apt_install_suggests: "false"
 
+apt_additional_keys: []         # additional keys to add, specified as ASCII GPG key files
 apt_additional_repositories: [] # additional repositories, specified as string
                                 # e.g. 'deb http://example.org/debian testing main'
 apt_pins: []                    # customize apt pins, e.g. for installing
